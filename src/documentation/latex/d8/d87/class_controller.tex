@@ -1,0 +1,221 @@
+\doxysection{Controller Class Reference}
+\hypertarget{class_controller}{}\label{class_controller}\index{Controller@{Controller}}
+
+
+Класс для  
+
+
+
+
+{\ttfamily \#include $<$controller.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \mbox{\hyperlink{class_controller_a081ef9943ee8db641f8021868b67a982}{Init\+Maze\+From\+File}} (QString filepath)
+\begin{DoxyCompactList}\small\item\em Функция для получения maze из файла \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \mbox{\hyperlink{class_controller_adff4a00fc3ea8d242c1eb828e0227767}{Generate\+Maze}} (int size)
+\begin{DoxyCompactList}\small\item\em Функция генерации уникального maze. \end{DoxyCompactList}\item 
+solution\+\_\+stack \mbox{\hyperlink{class_controller_a4e47e19319d9f58c129d6c25de20954c}{Solve\+Maze}} (point start, point end, const \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \&Maze)
+\begin{DoxyCompactList}\small\item\em Функция нахождения пути в maze. \end{DoxyCompactList}\item 
+solution\+\_\+stack \mbox{\hyperlink{class_controller_af86df8d1fffead3c8b26fb98a364ab51}{Solve\+Cave}} (point start, point end, const \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&Cave)
+\begin{DoxyCompactList}\small\item\em Функция нахождения пути в maze. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \mbox{\hyperlink{class_controller_a75d34cbb35f6889fa75b257d573ae6e6}{Init\+Random\+Cave}} (int x, int y, int birth, int death, float chance)
+\begin{DoxyCompactList}\small\item\em Создание случайного cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \mbox{\hyperlink{class_controller_ac9c641641e84085547a44a9475ea0321}{Init\+Cave\+From\+File}} (QString filepath)
+\begin{DoxyCompactList}\small\item\em Функция для получения cave из файла \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a24a8e33c390dddd551382e53c48f11f0}{Update\+State\+Of\+Cave}} (\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&cave, int birth\+Limit, int death\+Limit)
+\begin{DoxyCompactList}\small\item\em Функция снова использует алгоритм по оптимизации cave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a2e84e2c779d0968f771befb675149835}{Save\+Maze}} (QString filepath, \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} maze)
+\begin{DoxyCompactList}\small\item\em Функция записывает maze в файл \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a611b7caefaea290ea845735c20845365}{Save\+Cave}} (QString filepath, \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} cave)
+\begin{DoxyCompactList}\small\item\em Функция записывает cave в файл \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_controller_adff4a00fc3ea8d242c1eb828e0227767}\label{class_controller_adff4a00fc3ea8d242c1eb828e0227767} 
+\index{Controller@{Controller}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} Controller\+::\+Generate\+Maze (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Функция генерации уникального maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Размер стороны матрицы \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+maze\+\_\+t Сгенерированный maze 
+\end{DoxyReturn}
+\Hypertarget{class_controller_ac9c641641e84085547a44a9475ea0321}\label{class_controller_ac9c641641e84085547a44a9475ea0321} 
+\index{Controller@{Controller}!InitCaveFromFile@{InitCaveFromFile}}
+\index{InitCaveFromFile@{InitCaveFromFile}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{InitCaveFromFile()}{InitCaveFromFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} Controller\+::\+Init\+Cave\+From\+File (\begin{DoxyParamCaption}\item[{QString}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Функция для получения cave из файла 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Путь к файлу с cave \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+maze\+\_\+t Cave из файла 
+\end{DoxyReturn}
+\Hypertarget{class_controller_a081ef9943ee8db641f8021868b67a982}\label{class_controller_a081ef9943ee8db641f8021868b67a982} 
+\index{Controller@{Controller}!InitMazeFromFile@{InitMazeFromFile}}
+\index{InitMazeFromFile@{InitMazeFromFile}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{InitMazeFromFile()}{InitMazeFromFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} Controller\+::\+Init\+Maze\+From\+File (\begin{DoxyParamCaption}\item[{QString}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Функция для получения maze из файла 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Путь к файлу с maze \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+maze\+\_\+t Maze из файла 
+\end{DoxyReturn}
+\Hypertarget{class_controller_a75d34cbb35f6889fa75b257d573ae6e6}\label{class_controller_a75d34cbb35f6889fa75b257d573ae6e6} 
+\index{Controller@{Controller}!InitRandomCave@{InitRandomCave}}
+\index{InitRandomCave@{InitRandomCave}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{InitRandomCave()}{InitRandomCave()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} Controller\+::\+Init\+Random\+Cave (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{birth,  }\item[{int}]{death,  }\item[{float}]{chance }\end{DoxyParamCaption})}
+
+
+
+Создание случайного cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & строки \\
+\hline
+{\em y} & столбцы \\
+\hline
+{\em birth} & показатель "{}жизни"{} \\
+\hline
+{\em death} & показатель "{}смерти"{} \\
+\hline
+{\em chance} & вероятность инициализации клетки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cave\+\_\+t Уникальный cave 
+\end{DoxyReturn}
+\Hypertarget{class_controller_a611b7caefaea290ea845735c20845365}\label{class_controller_a611b7caefaea290ea845735c20845365} 
+\index{Controller@{Controller}!SaveCave@{SaveCave}}
+\index{SaveCave@{SaveCave}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SaveCave()}{SaveCave()}}
+{\footnotesize\ttfamily void Controller\+::\+Save\+Cave (\begin{DoxyParamCaption}\item[{QString}]{filepath,  }\item[{\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}}}]{cave }\end{DoxyParamCaption})}
+
+
+
+Функция записывает cave в файл 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & путь к файлу \\
+\hline
+{\em maze} & cave для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_controller_a2e84e2c779d0968f771befb675149835}\label{class_controller_a2e84e2c779d0968f771befb675149835} 
+\index{Controller@{Controller}!SaveMaze@{SaveMaze}}
+\index{SaveMaze@{SaveMaze}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SaveMaze()}{SaveMaze()}}
+{\footnotesize\ttfamily void Controller\+::\+Save\+Maze (\begin{DoxyParamCaption}\item[{QString}]{filepath,  }\item[{\mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}}}]{maze }\end{DoxyParamCaption})}
+
+
+
+Функция записывает maze в файл 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & путь к файлу \\
+\hline
+{\em maze} & maze для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_controller_af86df8d1fffead3c8b26fb98a364ab51}\label{class_controller_af86df8d1fffead3c8b26fb98a364ab51} 
+\index{Controller@{Controller}!SolveCave@{SolveCave}}
+\index{SolveCave@{SolveCave}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SolveCave()}{SolveCave()}}
+{\footnotesize\ttfamily solution\+\_\+stack Controller\+::\+Solve\+Cave (\begin{DoxyParamCaption}\item[{point}]{start,  }\item[{point}]{end,  }\item[{const \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&}]{Cave }\end{DoxyParamCaption})}
+
+
+
+Функция нахождения пути в maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & точка начала маршрута \\
+\hline
+{\em end} & точка конца маршрута \\
+\hline
+{\em Maze} & Cave, в котором ищется маршрут между точек \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+solution\+\_\+stack Путь 
+\end{DoxyReturn}
+\Hypertarget{class_controller_a4e47e19319d9f58c129d6c25de20954c}\label{class_controller_a4e47e19319d9f58c129d6c25de20954c} 
+\index{Controller@{Controller}!SolveMaze@{SolveMaze}}
+\index{SolveMaze@{SolveMaze}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SolveMaze()}{SolveMaze()}}
+{\footnotesize\ttfamily solution\+\_\+stack Controller\+::\+Solve\+Maze (\begin{DoxyParamCaption}\item[{point}]{start,  }\item[{point}]{end,  }\item[{const \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \&}]{Maze }\end{DoxyParamCaption})}
+
+
+
+Функция нахождения пути в maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & точка начала маршрута \\
+\hline
+{\em end} & точка конца маршрута \\
+\hline
+{\em Maze} & Maze, в котором ищется маршрут между точек \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+solution\+\_\+stack Путь 
+\end{DoxyReturn}
+\Hypertarget{class_controller_a24a8e33c390dddd551382e53c48f11f0}\label{class_controller_a24a8e33c390dddd551382e53c48f11f0} 
+\index{Controller@{Controller}!UpdateStateOfCave@{UpdateStateOfCave}}
+\index{UpdateStateOfCave@{UpdateStateOfCave}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{UpdateStateOfCave()}{UpdateStateOfCave()}}
+{\footnotesize\ttfamily void Controller\+::\+Update\+State\+Of\+Cave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&}]{cave,  }\item[{int}]{birth\+Limit,  }\item[{int}]{death\+Limit }\end{DoxyParamCaption})}
+
+
+
+Функция снова использует алгоритм по оптимизации cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cave} & Cave для оптимизации \\
+\hline
+{\em birth\+Limit} & показатель "{}жизни"{} \\
+\hline
+{\em death\+Limit} & показатель "{}смерти"{} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+controller/controller.\+h\item 
+controller/controller.\+cc\end{DoxyCompactItemize}

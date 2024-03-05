@@ -1,0 +1,108 @@
+\doxysection{s21\+::Solver\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classs21_1_1_solver}{}\label{classs21_1_1_solver}\index{s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}}
+
+
+Экземпляр класса ищет путь в maze/cave.  
+
+
+
+
+{\ttfamily \#include $<$solver.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+solution\+\_\+stack \mbox{\hyperlink{classs21_1_1_solver_a051d0b42607a2643fea35df4a36949be}{Solve}} (point start, point end, const T \&mzcv)
+\begin{DoxyCompactList}\small\item\em Метод, который ищет путь в maze/cave относительно двух заданных точек \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ point $>$ \mbox{\hyperlink{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658}{Define\+Accessable\+Neighbors}} (point p, const \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \&maze)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для поиска достпуных для посещения соседей в maze. \end{DoxyCompactList}\item 
+std\+::vector$<$ point $>$ \mbox{\hyperlink{classs21_1_1_solver_a39be7b9d99c5f836ff78028b28c0ddaf}{Define\+Accessable\+Neighbors}} (point p, const \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&cave)
+\begin{DoxyCompactList}\small\item\em Вспомогательная функция для поиска достпуных для посещения соседей в cave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class s21\+::\+Solver$<$ T $>$}
+Экземпляр класса ищет путь в maze/cave. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Шаблонный параметр для передачи maze/cave \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classs21_1_1_solver_a39be7b9d99c5f836ff78028b28c0ddaf}\label{classs21_1_1_solver_a39be7b9d99c5f836ff78028b28c0ddaf} 
+\index{s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}!DefineAccessableNeighbors@{DefineAccessableNeighbors}}
+\index{DefineAccessableNeighbors@{DefineAccessableNeighbors}!s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DefineAccessableNeighbors()}{DefineAccessableNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ point $>$ \mbox{\hyperlink{classs21_1_1_solver}{s21\+::\+Solver}}$<$ T $>$\+::\+Define\+Accessable\+Neighbors (\begin{DoxyParamCaption}\item[{point}]{p,  }\item[{const \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&}]{cave }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Вспомогательная функция для поиска достпуных для посещения соседей в cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Текущая точка, у которой будем смотреть соседей \\
+\hline
+{\em maze} & Ссылка на cave \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$point$>$ Вектор с точками, которые можно посетить 
+\end{DoxyReturn}
+\Hypertarget{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658}\label{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658} 
+\index{s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}!DefineAccessableNeighbors@{DefineAccessableNeighbors}}
+\index{DefineAccessableNeighbors@{DefineAccessableNeighbors}!s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DefineAccessableNeighbors()}{DefineAccessableNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ point $>$ \mbox{\hyperlink{classs21_1_1_solver}{s21\+::\+Solver}}$<$ T $>$\+::\+Define\+Accessable\+Neighbors (\begin{DoxyParamCaption}\item[{point}]{p,  }\item[{const \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \&}]{maze }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Вспомогательная функция для поиска достпуных для посещения соседей в maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Текущая точка, у которой будем смотреть соседей \\
+\hline
+{\em maze} & Ссылка на maze \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$point$>$ Вектор с точками, которые можно посетить 
+\end{DoxyReturn}
+\Hypertarget{classs21_1_1_solver_a051d0b42607a2643fea35df4a36949be}\label{classs21_1_1_solver_a051d0b42607a2643fea35df4a36949be} 
+\index{s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}!Solve@{Solve}}
+\index{Solve@{Solve}!s21::Solver$<$ T $>$@{s21::Solver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+solution\+\_\+stack \mbox{\hyperlink{classs21_1_1_solver}{s21\+::\+Solver}}$<$ T $>$\+::\+Solve (\begin{DoxyParamCaption}\item[{point}]{start,  }\item[{point}]{end,  }\item[{const T \&}]{mzcv }\end{DoxyParamCaption})}
+
+
+
+Метод, который ищет путь в maze/cave относительно двух заданных точек 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Точка, из которой начинается путь \\
+\hline
+{\em end} & Точка, в которую должны прийти \\
+\hline
+{\em mzcv} & Шаблонный параметр для передачи ссылка на maze/cave \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$\ast$}{*} solution\+\_\+stack Найденный путь, записанный в стек 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+back/solver.\+h\end{DoxyCompactItemize}

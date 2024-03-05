@@ -1,0 +1,39 @@
+\doxysection{cavegenerator.\+h}
+\hypertarget{cavegenerator_8h_source}{}\label{cavegenerator_8h_source}\index{back/cavegenerator.h@{back/cavegenerator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAZE\_SRC\_BACK\_CAVEGENERATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAZE\_SRC\_BACK\_CAVEGENERATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}parser.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}solver.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }s21\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classs21_1_1_cave_generator}{CaveGenerator}}\ \{}
+\DoxyCodeLine{00016\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{classs21_1_1_cave_generator_a9c9758ff98e5e06fa36fbd79f93b0f64}{CaveGenerator}}();}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{classs21_1_1_cave_generator_a9c9758ff98e5e06fa36fbd79f93b0f64}{CaveGenerator}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ birht,\ \textcolor{keywordtype}{int}\ death,\ \textcolor{keywordtype}{float}\ chance\ =\ 1.f);}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classs21_1_1_cave_generator_a30ebcdaf2899904d2ffa6773020924ae}{\string~CaveGenerator}}();}
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ \mbox{\hyperlink{classs21_1_1_cave_generator_a74b15b0ed5c55aa956b39d66c5b7b7f3}{InitRandomCave}}();}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1_cave_generator_a5a15e4b80a28f735181d6ca7e390ad5b}{UpdateStateOfCave}}(\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ \&cave,\ \textcolor{keywordtype}{int}\ birhtLimit,\ \textcolor{keywordtype}{int}\ deathLimit);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ AllocateCave();}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{void}\ AllocateCave(\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ \&cave);}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{int}\ CountAliveNeighbors(\textcolor{keyword}{const}\ \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ \&cave,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{int}\ x\_,\ y\_;}
+\DoxyCodeLine{00059\ \ \ \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ cave\_;}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{int}\ birthLimit\_;}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{int}\ deathLimit\_;}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{float}\ probability\_;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \}\ \ \textcolor{comment}{//\ namespace\ s21}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

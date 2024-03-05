@@ -1,0 +1,126 @@
+\doxysection{solver.\+h}
+\hypertarget{solver_8h_source}{}\label{solver_8h_source}\index{back/solver.h@{back/solver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAZE\_SRC\_BACK\_SOLVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAZE\_SRC\_BACK\_SOLVER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <typeindex>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}parser.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }s21\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }point\ =\ \textcolor{keyword}{typename}\ std::pair<int,\ int>;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }solution\_stack\ =\ \textcolor{keyword}{typename}\ std::stack<point>;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classs21_1_1_solver}{Solver}}\ \{}
+\DoxyCodeLine{00027\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{classs21_1_1_solver}{Solver}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ \ \ solution\_stack\ \mbox{\hyperlink{classs21_1_1_solver_a051d0b42607a2643fea35df4a36949be}{Solve}}(point\ start,\ point\ end,\ \textcolor{keyword}{const}\ T\ \&mzcv);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ std::vector<point>\ \mbox{\hyperlink{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658}{DefineAccessableNeighbors}}(point\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\_t}}\ \&maze);}
+\DoxyCodeLine{00058\ \ \ std::vector<point>\ \mbox{\hyperlink{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658}{DefineAccessableNeighbors}}(point\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ \&cave);}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00062\ solution\_stack\ \mbox{\hyperlink{classs21_1_1_solver_a051d0b42607a2643fea35df4a36949be}{Solver<T>::Solve}}(point\ start,\ point\ end,\ \textcolor{keyword}{const}\ T\ \&mzcv)\ \{}
+\DoxyCodeLine{00063\ \ \ solution\_stack\ res;}
+\DoxyCodeLine{00064\ \ \ std::vector<point>\ neighbors;}
+\DoxyCodeLine{00065\ \ \ std::queue<point>\ frontier;}
+\DoxyCodeLine{00066\ \ \ std::set<point>\ visited;}
+\DoxyCodeLine{00067\ \ \ frontier.push(start);}
+\DoxyCodeLine{00068\ \ \ visited.insert(start);}
+\DoxyCodeLine{00069\ \ \ \textcolor{comment}{//\ init\ prev\ matrix}}
+\DoxyCodeLine{00070\ \ \ point\ prev[mzcv.cols][mzcv.rows];}
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ mzcv.cols;\ i++)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ mzcv.rows;\ j++)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ prev[i][j]\ =\ point(-\/1,\ -\/1);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordflow}{while}\ (!frontier.empty())\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ point\ curr\ =\ frontier.front();}
+\DoxyCodeLine{00079\ \ \ \ \ frontier.pop();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (curr\ ==\ end)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (curr\ !=\ point(-\/1,\ -\/1))\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ res.push(curr);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ curr\ =\ prev[curr.first][curr.second];}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ this\ seems\ to\ be\ useless}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{typeid}(T)\ ==\ \textcolor{keyword}{typeid}(\mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\_t}})\ ||\ \textcolor{keyword}{typeid}(T)\ ==\ \textcolor{keyword}{typeid}(\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}))\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ neighbors\ =\ DefineAccessableNeighbors(curr,\ mzcv);}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ p\ :\ neighbors)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (visited.count(p)\ ==\ 0u)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ visited.insert(p);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ frontier.push(p);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ prev[p.first][p.second]\ =\ curr;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ neighbors.clear();}
+\DoxyCodeLine{00101\ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ res\ =\ solution\_stack\{\};}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00107\ std::vector<point>\ \mbox{\hyperlink{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658}{Solver<T>::DefineAccessableNeighbors}}(point\ p,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\_t}}\ \&maze)\ \{}
+\DoxyCodeLine{00109\ \ \ std::vector<point>\ neighbors;}
+\DoxyCodeLine{00110\ \ \ \textcolor{comment}{//\ check\ north}}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordflow}{if}\ (p.second\ >\ 0\ \&\&\ !maze.mazeBottomBorder[p.second\ -\/\ 1][p.first])\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ neighbors.push\_back(point\{p.first,\ p.second\ -\/\ 1\});}
+\DoxyCodeLine{00113\ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \textcolor{comment}{//\ check\ south}}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordflow}{if}\ (p.second\ <\ maze.cols\ -\/\ 1\ \&\&\ !maze.mazeBottomBorder[p.second][p.first])\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ neighbors.push\_back(point\{p.first,\ p.second\ +\ 1\});}
+\DoxyCodeLine{00117\ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \textcolor{comment}{//\ check\ west}}
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordflow}{if}\ (p.first\ >\ 0\ \&\&\ !maze.mazeRightBorder[p.second][p.first\ -\/\ 1])\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ neighbors.push\_back(point\{p.first\ -\/\ 1,\ p.second\});}
+\DoxyCodeLine{00121\ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \textcolor{comment}{//\ check\ east}}
+\DoxyCodeLine{00123\ \ \ \textcolor{keywordflow}{if}\ (p.first\ <\ maze.rows\ -\/\ 1\ \&\&\ !maze.mazeRightBorder[p.second][p.first])\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ neighbors.push\_back(point\{p.first\ +\ 1,\ p.second\});}
+\DoxyCodeLine{00125\ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordflow}{return}\ neighbors;}
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00129\ std::vector<point>\ \mbox{\hyperlink{classs21_1_1_solver_a878430837d2f224514e11e18cdf2c658}{Solver<T>::DefineAccessableNeighbors}}(point\ p,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\_t}}\ \&cave)\ \{}
+\DoxyCodeLine{00131\ \ \ std::vector<point>\ neighbors;}
+\DoxyCodeLine{00132\ \ \ \textcolor{keywordtype}{int}\ x\ =\ p.first,\ y\ =\ p.second;}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordflow}{if}\ (cave.cave.empty())\ \textcolor{keywordflow}{return}\ neighbors;}
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordflow}{if}\ (y\ >=\ cave.cols\ ||\ y\ <\ 0)\ \textcolor{keywordflow}{return}\ neighbors;}
+\DoxyCodeLine{00135\ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ cave.rows\ ||\ x\ <\ 0)\ \textcolor{keywordflow}{return}\ neighbors;}
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordflow}{if}\ (cave.cave[y][x])\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{return}\ neighbors;}
+\DoxyCodeLine{00138\ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ -\/1;\ i\ <=\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{if}\ (y\ +\ i\ <\ 0\ ||\ y\ +\ i\ >=\ cave.cols)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ -\/1;\ j\ <=\ 1;\ j++)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0\ \&\&\ j\ ==\ 0)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ +\ j\ <\ 0\ ||\ x\ +\ j\ >=\ cave.rows)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ i\ +\ j;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sum\ ==\ -\/2\ ||\ sum\ ==\ 0\ ||\ sum\ ==\ 2)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!cave.cave[y\ +\ i][x\ +\ j])\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ neighbors.push\_back(point\{x\ +\ j,\ y\ +\ i\});}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keywordflow}{return}\ neighbors;}
+\DoxyCodeLine{00154\ \}}
+\DoxyCodeLine{00155\ \}\ \ \textcolor{comment}{//\ namespace\ s21}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ SOLVER\_H}}
+
+\end{DoxyCode}

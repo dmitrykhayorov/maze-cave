@@ -1,0 +1,129 @@
+\doxysection{s21\+::Cave\+Generator Class Reference}
+\hypertarget{classs21_1_1_cave_generator}{}\label{classs21_1_1_cave_generator}\index{s21::CaveGenerator@{s21::CaveGenerator}}
+
+
+класс для генерации уникальных cave  
+
+
+
+
+{\ttfamily \#include $<$cavegenerator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a9c9758ff98e5e06fa36fbd79f93b0f64}\label{classs21_1_1_cave_generator_a9c9758ff98e5e06fa36fbd79f93b0f64} 
+{\bfseries Cave\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию для генератора Cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classs21_1_1_cave_generator_a085829ed829b64857e8ed9af1f8d472b}{Cave\+Generator}} (int x, int y, int birht, int death, float chance=1.f)
+\begin{DoxyCompactList}\small\item\em Конструктор для генератора Cave. \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1_cave_generator_a30ebcdaf2899904d2ffa6773020924ae}\label{classs21_1_1_cave_generator_a30ebcdaf2899904d2ffa6773020924ae} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Cave\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Деструктор для генератора Cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \mbox{\hyperlink{classs21_1_1_cave_generator_a74b15b0ed5c55aa956b39d66c5b7b7f3}{Init\+Random\+Cave}} ()
+\begin{DoxyCompactList}\small\item\em Получить сгенерированный Cave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_cave_generator_a5a15e4b80a28f735181d6ca7e390ad5b}{Update\+State\+Of\+Cave}} (\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&cave, int birht\+Limit, int death\+Limit)
+\begin{DoxyCompactList}\small\item\em Функция улучшения Cave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a0c26dd5e272a2d9cea7c7b3421156f00}\label{classs21_1_1_cave_generator_a0c26dd5e272a2d9cea7c7b3421156f00} 
+void {\bfseries Allocate\+Cave} ()
+\item 
+\Hypertarget{classs21_1_1_cave_generator_aadc29fb073929abc74204068738338eb}\label{classs21_1_1_cave_generator_aadc29fb073929abc74204068738338eb} 
+void {\bfseries Allocate\+Cave} (\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&cave)
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a2fd53326f15fa0214d5346e5991bf35f}\label{classs21_1_1_cave_generator_a2fd53326f15fa0214d5346e5991bf35f} 
+int {\bfseries Count\+Alive\+Neighbors} (const \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&cave, int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a128d55336d99d1e4fb4ab2ad4b27ef5a}\label{classs21_1_1_cave_generator_a128d55336d99d1e4fb4ab2ad4b27ef5a} 
+int {\bfseries x\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a431e942263b140fc4b8ccf7278cd53f2}\label{classs21_1_1_cave_generator_a431e942263b140fc4b8ccf7278cd53f2} 
+int {\bfseries y\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a3e7caf5221209b92236d2171855ce4de}\label{classs21_1_1_cave_generator_a3e7caf5221209b92236d2171855ce4de} 
+\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} {\bfseries cave\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a2c357704965d18c3de49e00442908f2b}\label{classs21_1_1_cave_generator_a2c357704965d18c3de49e00442908f2b} 
+int {\bfseries birth\+Limit\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_a4fe60d84217eb54c7b00ef9e7105152f}\label{classs21_1_1_cave_generator_a4fe60d84217eb54c7b00ef9e7105152f} 
+int {\bfseries death\+Limit\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_cave_generator_ac6ed7e9736536cb0b35e180f54298f21}\label{classs21_1_1_cave_generator_ac6ed7e9736536cb0b35e180f54298f21} 
+float {\bfseries probability\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+класс для генерации уникальных cave 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classs21_1_1_cave_generator_a085829ed829b64857e8ed9af1f8d472b}\label{classs21_1_1_cave_generator_a085829ed829b64857e8ed9af1f8d472b} 
+\index{s21::CaveGenerator@{s21::CaveGenerator}!CaveGenerator@{CaveGenerator}}
+\index{CaveGenerator@{CaveGenerator}!s21::CaveGenerator@{s21::CaveGenerator}}
+\doxysubsubsection{\texorpdfstring{CaveGenerator()}{CaveGenerator()}}
+{\footnotesize\ttfamily Cave\+Generator\+::\+Cave\+Generator (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{birht,  }\item[{int}]{death,  }\item[{float}]{chance = {\ttfamily 1.f} }\end{DoxyParamCaption})}
+
+
+
+Конструктор для генератора Cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em birht} & \\
+\hline
+{\em death} & \\
+\hline
+{\em chance} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classs21_1_1_cave_generator_a74b15b0ed5c55aa956b39d66c5b7b7f3}\label{classs21_1_1_cave_generator_a74b15b0ed5c55aa956b39d66c5b7b7f3} 
+\index{s21::CaveGenerator@{s21::CaveGenerator}!InitRandomCave@{InitRandomCave}}
+\index{InitRandomCave@{InitRandomCave}!s21::CaveGenerator@{s21::CaveGenerator}}
+\doxysubsubsection{\texorpdfstring{InitRandomCave()}{InitRandomCave()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} Cave\+Generator\+::\+Init\+Random\+Cave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Получить сгенерированный Cave. 
+
+\begin{DoxyReturn}{Returns}
+cave\+\_\+t сгенерированный Cave 
+\end{DoxyReturn}
+\Hypertarget{classs21_1_1_cave_generator_a5a15e4b80a28f735181d6ca7e390ad5b}\label{classs21_1_1_cave_generator_a5a15e4b80a28f735181d6ca7e390ad5b} 
+\index{s21::CaveGenerator@{s21::CaveGenerator}!UpdateStateOfCave@{UpdateStateOfCave}}
+\index{UpdateStateOfCave@{UpdateStateOfCave}!s21::CaveGenerator@{s21::CaveGenerator}}
+\doxysubsubsection{\texorpdfstring{UpdateStateOfCave()}{UpdateStateOfCave()}}
+{\footnotesize\ttfamily void Cave\+Generator\+::\+Update\+State\+Of\+Cave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \&}]{cave,  }\item[{int}]{birht\+Limit,  }\item[{int}]{death\+Limit }\end{DoxyParamCaption})}
+
+
+
+Функция улучшения Cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cave} & Cave для улучшения \\
+\hline
+{\em birht\+Limit} & Лимит рождения \\
+\hline
+{\em death\+Limit} & Лимит смерти \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+back/cavegenerator.\+h\item 
+back/cavegenerator.\+cc\end{DoxyCompactItemize}

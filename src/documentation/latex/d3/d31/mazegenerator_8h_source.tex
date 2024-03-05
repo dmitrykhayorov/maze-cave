@@ -1,0 +1,32 @@
+\doxysection{mazegenerator.\+h}
+\hypertarget{mazegenerator_8h_source}{}\label{mazegenerator_8h_source}\index{back/mazegenerator.h@{back/mazegenerator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAZE\_SRC\_BACK\_MAZEGENERATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAZE\_SRC\_BACK\_MAZEGENERATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}parser.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }s21\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classs21_1_1maze_generator}{mazeGenerator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classs21_1_1_parser}{s21::Parser}}\ \{}
+\DoxyCodeLine{00012\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classs21_1_1maze_generator_a64233c056d718717ee94799be2a593ef}{mazeGenerator}}();}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{classs21_1_1maze_generator_ae3ae70041674d9a880a473503b24cf47}{\string~mazeGenerator}}();}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_ab97748dd27d7dcf42d50e99c1e24e477}{GeneratePerfectMaze}}(\textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_a7cc96ba470ea702e922f1052dce81f36}{CreateWalls\_}}();}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_af0e43e6c4eeeec1afc2e06fd78c9fc02}{CreateRightWalls\_}}(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_a3e62f0a77c32481765b95fd381b79ad9}{CreateBottomWalls\_}}(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_a667c9ab0b3c9a8abd9a1b523c358c15b}{ChangeLastRow\_}}();}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_a153d732e82b6b879636b754d208783a5}{ChangeVectorWithNumsAfterBottom\_}}(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classs21_1_1maze_generator_a0c6fd47859fbda4b84441b1426e5344b}{ChangeVectorWithNumsAfterRight\_}}(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ std::vector<int>\ \mbox{\hyperlink{classs21_1_1maze_generator_aed8ec4c931fd78f4916c1d863f151aec}{row\_with\_nums\_}};}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classs21_1_1maze_generator_a3e405873ce29a2c14b1607f0c54723f3}{unique\_counter\_for\_function\_ChangeVectorWithNums\_}};}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ \}\ \ \textcolor{comment}{//\ namespace\ s21}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

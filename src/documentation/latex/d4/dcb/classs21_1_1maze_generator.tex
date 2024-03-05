@@ -1,0 +1,181 @@
+\doxysection{s21\+::maze\+Generator Class Reference}
+\hypertarget{classs21_1_1maze_generator}{}\label{classs21_1_1maze_generator}\index{s21::mazeGenerator@{s21::mazeGenerator}}
+
+
+Класс для генерации уникальных maze.  
+
+
+
+
+{\ttfamily \#include $<$mazegenerator.\+h$>$}
+
+Inheritance diagram for s21\+::maze\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/dcb/classs21_1_1maze_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1maze_generator_a64233c056d718717ee94799be2a593ef}\label{classs21_1_1maze_generator_a64233c056d718717ee94799be2a593ef} 
+{\bfseries maze\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию для генератора уникальных maze. \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1maze_generator_ae3ae70041674d9a880a473503b24cf47}\label{classs21_1_1maze_generator_ae3ae70041674d9a880a473503b24cf47} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}maze\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Деструктор для генератора уникальных maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1maze_generator_ab97748dd27d7dcf42d50e99c1e24e477}{Generate\+Perfect\+Maze}} (int size)
+\begin{DoxyCompactList}\small\item\em Функция, генерирующая уникальный maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classs21_1_1_parser}{s21\+::\+Parser}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classs21_1_1_parser_a95d973697617094a48e4bcb2cd5a8be6}{Parser}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Конструктор для парсера с указанием пути к файлу с maze/cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classs21_1_1_parser_a12234f6cd36b61af4b50c94a179422c1}{Parser}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию для парсера \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Parser} ()
+\begin{DoxyCompactList}\small\item\em Деструктор для парсера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a456ad01ab37c7aedb59c6d14c87b1bc0}{Set\+Filepath\+Maze}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Функция для установки пути к файлу с maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a91496d7add27dddb457e355537313294}{Set\+Filepath\+Cave}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Функция для установки пути к файлу с cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \mbox{\hyperlink{classs21_1_1_parser_abf07bfe4daf5144178592ff8d176b4f7}{Get\+Vectors\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Получение данных о спаршенном maze. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \mbox{\hyperlink{classs21_1_1_parser_ad577ba4d21efdf33ea5f24e38ff8de0a}{Get\+Vectors\+Cave}} ()
+\begin{DoxyCompactList}\small\item\em Получение данных о спаршенном cave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1maze_generator_a7cc96ba470ea702e922f1052dce81f36}\label{classs21_1_1maze_generator_a7cc96ba470ea702e922f1052dce81f36} 
+void {\bfseries Create\+Walls\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция по созданию стен в матрице maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1maze_generator_af0e43e6c4eeeec1afc2e06fd78c9fc02}{Create\+Right\+Walls\+\_\+}} (int row)
+\begin{DoxyCompactList}\small\item\em Функция по созданию правых стен в матрице maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1maze_generator_a3e62f0a77c32481765b95fd381b79ad9}{Create\+Bottom\+Walls\+\_\+}} (int row)
+\begin{DoxyCompactList}\small\item\em Функция по созданию нижних стен в матрице maze. \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1maze_generator_a667c9ab0b3c9a8abd9a1b523c358c15b}\label{classs21_1_1maze_generator_a667c9ab0b3c9a8abd9a1b523c358c15b} 
+void {\bfseries Change\+Last\+Row\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция по изменению нижнего ряда матрицы maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1maze_generator_a153d732e82b6b879636b754d208783a5}{Change\+Vector\+With\+Nums\+After\+Bottom\+\_\+}} (int row)
+\begin{DoxyCompactList}\small\item\em Функция создающая вектор ряда после того, как сгенерированы правые границы этого ряда \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1maze_generator_a0c6fd47859fbda4b84441b1426e5344b}{Change\+Vector\+With\+Nums\+After\+Right\+\_\+}} (int row)
+\begin{DoxyCompactList}\small\item\em Функция создающая вектор ряда после того, как сгенерированы нижние границы этого ряда \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1maze_generator_aed8ec4c931fd78f4916c1d863f151aec}\label{classs21_1_1maze_generator_aed8ec4c931fd78f4916c1d863f151aec} 
+std\+::vector$<$ int $>$ {\bfseries row\+\_\+with\+\_\+nums\+\_\+}
+\begin{DoxyCompactList}\small\item\em Вектор ряда \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1maze_generator_a3e405873ce29a2c14b1607f0c54723f3}\label{classs21_1_1maze_generator_a3e405873ce29a2c14b1607f0c54723f3} 
+int {\bfseries unique\+\_\+counter\+\_\+for\+\_\+function\+\_\+\+Change\+Vector\+With\+Nums\+\_\+}
+\begin{DoxyCompactList}\small\item\em Счётчик уникальных значений для добавления в вектор ряда \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classs21_1_1_parser}{s21\+::\+Parser}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Allocate\+Memory\+Maze\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция выделяет память под maze. \end{DoxyCompactList}\item 
+void {\bfseries Clear\+Memory\+Maze\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция чистит maze для записи нового maze. \end{DoxyCompactList}\item 
+void {\bfseries Allocate\+Memory\+Cave\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция выделяет память под cave. \end{DoxyCompactList}\item 
+void {\bfseries Clear\+Memory\+Cave\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция чистит maze для записи нового cave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classs21_1_1_parser}{s21\+::\+Parser}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows\+\_\+}
+\item 
+int {\bfseries cols\+\_\+}
+\item 
+matrix {\bfseries right\+B\+\_\+}
+\item 
+matrix {\bfseries bottom\+B\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для генерации уникальных maze. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classs21_1_1maze_generator_a153d732e82b6b879636b754d208783a5}\label{classs21_1_1maze_generator_a153d732e82b6b879636b754d208783a5} 
+\index{s21::mazeGenerator@{s21::mazeGenerator}!ChangeVectorWithNumsAfterBottom\_@{ChangeVectorWithNumsAfterBottom\_}}
+\index{ChangeVectorWithNumsAfterBottom\_@{ChangeVectorWithNumsAfterBottom\_}!s21::mazeGenerator@{s21::mazeGenerator}}
+\doxysubsubsection{\texorpdfstring{ChangeVectorWithNumsAfterBottom\_()}{ChangeVectorWithNumsAfterBottom\_()}}
+{\footnotesize\ttfamily void maze\+Generator\+::\+Change\+Vector\+With\+Nums\+After\+Bottom\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция создающая вектор ряда после того, как сгенерированы правые границы этого ряда 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1maze_generator_a0c6fd47859fbda4b84441b1426e5344b}\label{classs21_1_1maze_generator_a0c6fd47859fbda4b84441b1426e5344b} 
+\index{s21::mazeGenerator@{s21::mazeGenerator}!ChangeVectorWithNumsAfterRight\_@{ChangeVectorWithNumsAfterRight\_}}
+\index{ChangeVectorWithNumsAfterRight\_@{ChangeVectorWithNumsAfterRight\_}!s21::mazeGenerator@{s21::mazeGenerator}}
+\doxysubsubsection{\texorpdfstring{ChangeVectorWithNumsAfterRight\_()}{ChangeVectorWithNumsAfterRight\_()}}
+{\footnotesize\ttfamily void maze\+Generator\+::\+Change\+Vector\+With\+Nums\+After\+Right\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция создающая вектор ряда после того, как сгенерированы нижние границы этого ряда 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1maze_generator_a3e62f0a77c32481765b95fd381b79ad9}\label{classs21_1_1maze_generator_a3e62f0a77c32481765b95fd381b79ad9} 
+\index{s21::mazeGenerator@{s21::mazeGenerator}!CreateBottomWalls\_@{CreateBottomWalls\_}}
+\index{CreateBottomWalls\_@{CreateBottomWalls\_}!s21::mazeGenerator@{s21::mazeGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateBottomWalls\_()}{CreateBottomWalls\_()}}
+{\footnotesize\ttfamily void maze\+Generator\+::\+Create\+Bottom\+Walls\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция по созданию нижних стен в матрице maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1maze_generator_af0e43e6c4eeeec1afc2e06fd78c9fc02}\label{classs21_1_1maze_generator_af0e43e6c4eeeec1afc2e06fd78c9fc02} 
+\index{s21::mazeGenerator@{s21::mazeGenerator}!CreateRightWalls\_@{CreateRightWalls\_}}
+\index{CreateRightWalls\_@{CreateRightWalls\_}!s21::mazeGenerator@{s21::mazeGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateRightWalls\_()}{CreateRightWalls\_()}}
+{\footnotesize\ttfamily void maze\+Generator\+::\+Create\+Right\+Walls\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция по созданию правых стен в матрице maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1maze_generator_ab97748dd27d7dcf42d50e99c1e24e477}\label{classs21_1_1maze_generator_ab97748dd27d7dcf42d50e99c1e24e477} 
+\index{s21::mazeGenerator@{s21::mazeGenerator}!GeneratePerfectMaze@{GeneratePerfectMaze}}
+\index{GeneratePerfectMaze@{GeneratePerfectMaze}!s21::mazeGenerator@{s21::mazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GeneratePerfectMaze()}{GeneratePerfectMaze()}}
+{\footnotesize\ttfamily void maze\+Generator\+::\+Generate\+Perfect\+Maze (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Функция, генерирующая уникальный maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Размер матрицы maze \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+back/mazegenerator.\+h\item 
+back/mazegenerator.\+cc\end{DoxyCompactItemize}

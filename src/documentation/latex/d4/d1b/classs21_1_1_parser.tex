@@ -1,0 +1,241 @@
+\doxysection{s21\+::Parser Class Reference}
+\hypertarget{classs21_1_1_parser}{}\label{classs21_1_1_parser}\index{s21::Parser@{s21::Parser}}
+
+
+класс для парсинга maze и cave из файла  
+
+
+
+
+{\ttfamily \#include $<$parser.\+h$>$}
+
+Inheritance diagram for s21\+::Parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d1b/classs21_1_1_parser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classs21_1_1_parser_a95d973697617094a48e4bcb2cd5a8be6}{Parser}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Конструктор для парсера с указанием пути к файлу с maze/cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classs21_1_1_parser_a12234f6cd36b61af4b50c94a179422c1}{Parser}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию для парсера \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1_parser_a3e658b5917a93a3ef648050d060e3a93}\label{classs21_1_1_parser_a3e658b5917a93a3ef648050d060e3a93} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Parser} ()
+\begin{DoxyCompactList}\small\item\em Деструктор для парсера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a456ad01ab37c7aedb59c6d14c87b1bc0}{Set\+Filepath\+Maze}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Функция для установки пути к файлу с maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a91496d7add27dddb457e355537313294}{Set\+Filepath\+Cave}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Функция для установки пути к файлу с cave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} \mbox{\hyperlink{classs21_1_1_parser_abf07bfe4daf5144178592ff8d176b4f7}{Get\+Vectors\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Получение данных о спаршенном maze. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} \mbox{\hyperlink{classs21_1_1_parser_ad577ba4d21efdf33ea5f24e38ff8de0a}{Get\+Vectors\+Cave}} ()
+\begin{DoxyCompactList}\small\item\em Получение данных о спаршенном cave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_parser_ad7f67fb5a921d2796abbfd9123095fc4}\label{classs21_1_1_parser_ad7f67fb5a921d2796abbfd9123095fc4} 
+void {\bfseries Allocate\+Memory\+Maze\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция выделяет память под maze. \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1_parser_a339841c4bbb4173b1fc750dfd4694d83}\label{classs21_1_1_parser_a339841c4bbb4173b1fc750dfd4694d83} 
+void {\bfseries Clear\+Memory\+Maze\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция чистит maze для записи нового maze. \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1_parser_ad84b3f8082318606b7fb56759b7d6d7b}\label{classs21_1_1_parser_ad84b3f8082318606b7fb56759b7d6d7b} 
+void {\bfseries Allocate\+Memory\+Cave\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция выделяет память под cave. \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1_parser_aea5e0669d0f785ddc9d223fe46c893d9}\label{classs21_1_1_parser_aea5e0669d0f785ddc9d223fe46c893d9} 
+void {\bfseries Clear\+Memory\+Cave\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция чистит maze для записи нового cave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_parser_a10cf7d1f1540274b1921de680b33c55d}\label{classs21_1_1_parser_a10cf7d1f1540274b1921de680b33c55d} 
+int {\bfseries rows\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_parser_a4e7c09fc9ccb0b84514fc0e5e47642f7}\label{classs21_1_1_parser_a4e7c09fc9ccb0b84514fc0e5e47642f7} 
+int {\bfseries cols\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_parser_ae162964ece716061b721635f54fc1e9f}\label{classs21_1_1_parser_ae162964ece716061b721635f54fc1e9f} 
+matrix {\bfseries right\+B\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_parser_afda82533cecc2e8a975c6173c2eb5227}\label{classs21_1_1_parser_afda82533cecc2e8a975c6173c2eb5227} 
+matrix {\bfseries bottom\+B\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_parser_aad3ac7a97b886970a038b6535149b48a}\label{classs21_1_1_parser_aad3ac7a97b886970a038b6535149b48a} 
+void {\bfseries Read\+Maze\+Fromfile\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция, открывающая файл с maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a2a85bcae7be492b2dfbd71b0fc3024cc}{Get\+Rows\+And\+Cols\+\_\+}} (std\+::string line\+\_\+from\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Функция считывающая количество строк и столбцов из таблицы \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a3f04555ceb98e5d806d0daf0864e0e5d}{Get\+Maze\+Row\+\_\+}} (std\+::string line\+\_\+from\+\_\+file, int num\+\_\+vector, int row)
+\begin{DoxyCompactList}\small\item\em Функция, считывающая стены из строки в матрицу \end{DoxyCompactList}\item 
+\Hypertarget{classs21_1_1_parser_a985bfc71db5d1d57dee06be5fb0d7a89}\label{classs21_1_1_parser_a985bfc71db5d1d57dee06be5fb0d7a89} 
+void {\bfseries Read\+Cave\+Fromfile\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Функция, открывающая файл с cave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classs21_1_1_parser_a5e2ec38d4b7baaaf296c672892eba508}{Get\+Cave\+Row\+\_\+}} (std\+::string line\+\_\+from\+\_\+file, int row)
+\begin{DoxyCompactList}\small\item\em Функция, считывающая состояние клетки из строки в матрицу \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classs21_1_1_parser_ad4f4fd0a77e5fac438a5dfb53245da97}\label{classs21_1_1_parser_ad4f4fd0a77e5fac438a5dfb53245da97} 
+matrix {\bfseries cave\+\_\+}
+\item 
+\Hypertarget{classs21_1_1_parser_a0623a16ec93c27131d27a054676da37e}\label{classs21_1_1_parser_a0623a16ec93c27131d27a054676da37e} 
+std\+::string {\bfseries filepath\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+класс для парсинга maze и cave из файла 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classs21_1_1_parser_a95d973697617094a48e4bcb2cd5a8be6}\label{classs21_1_1_parser_a95d973697617094a48e4bcb2cd5a8be6} 
+\index{s21::Parser@{s21::Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{Parser()}{Parser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Parser\+::\+Parser (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Конструктор для парсера с указанием пути к файлу с maze/cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1_parser_a12234f6cd36b61af4b50c94a179422c1}\label{classs21_1_1_parser_a12234f6cd36b61af4b50c94a179422c1} 
+\index{s21::Parser@{s21::Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{Parser()}{Parser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Parser\+::\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию для парсера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classs21_1_1_parser_a5e2ec38d4b7baaaf296c672892eba508}\label{classs21_1_1_parser_a5e2ec38d4b7baaaf296c672892eba508} 
+\index{s21::Parser@{s21::Parser}!GetCaveRow\_@{GetCaveRow\_}}
+\index{GetCaveRow\_@{GetCaveRow\_}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{GetCaveRow\_()}{GetCaveRow\_()}}
+{\footnotesize\ttfamily void Parser\+::\+Get\+Cave\+Row\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::string}]{line\+\_\+from\+\_\+file,  }\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция, считывающая состояние клетки из строки в матрицу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+from\+\_\+file} & Строка из файла \\
+\hline
+{\em row} & Ряд, в который записывать значения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1_parser_a3f04555ceb98e5d806d0daf0864e0e5d}\label{classs21_1_1_parser_a3f04555ceb98e5d806d0daf0864e0e5d} 
+\index{s21::Parser@{s21::Parser}!GetMazeRow\_@{GetMazeRow\_}}
+\index{GetMazeRow\_@{GetMazeRow\_}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{GetMazeRow\_()}{GetMazeRow\_()}}
+{\footnotesize\ttfamily void Parser\+::\+Get\+Maze\+Row\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::string}]{line\+\_\+from\+\_\+file,  }\item[{int}]{num\+\_\+vector,  }\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция, считывающая стены из строки в матрицу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+from\+\_\+file} & Строка из файла \\
+\hline
+{\em num\+\_\+vector} & Флаг, показывающий, в какую из матриц maze производить запись значений \\
+\hline
+{\em row} & Ряд, в который записывать значения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1_parser_a2a85bcae7be492b2dfbd71b0fc3024cc}\label{classs21_1_1_parser_a2a85bcae7be492b2dfbd71b0fc3024cc} 
+\index{s21::Parser@{s21::Parser}!GetRowsAndCols\_@{GetRowsAndCols\_}}
+\index{GetRowsAndCols\_@{GetRowsAndCols\_}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{GetRowsAndCols\_()}{GetRowsAndCols\_()}}
+{\footnotesize\ttfamily void Parser\+::\+Get\+Rows\+And\+Cols\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::string}]{line\+\_\+from\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Функция считывающая количество строк и столбцов из таблицы 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+from\+\_\+file} & строка из файла \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1_parser_ad577ba4d21efdf33ea5f24e38ff8de0a}\label{classs21_1_1_parser_ad577ba4d21efdf33ea5f24e38ff8de0a} 
+\index{s21::Parser@{s21::Parser}!GetVectorsCave@{GetVectorsCave}}
+\index{GetVectorsCave@{GetVectorsCave}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{GetVectorsCave()}{GetVectorsCave()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_cave_sturcture}{cave\+\_\+t}} Parser\+::\+Get\+Vectors\+Cave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Получение данных о спаршенном cave. 
+
+\begin{DoxyReturn}{Returns}
+cave\+\_\+t структура со всей информацией о maze 
+\end{DoxyReturn}
+\Hypertarget{classs21_1_1_parser_abf07bfe4daf5144178592ff8d176b4f7}\label{classs21_1_1_parser_abf07bfe4daf5144178592ff8d176b4f7} 
+\index{s21::Parser@{s21::Parser}!GetVectorsMaze@{GetVectorsMaze}}
+\index{GetVectorsMaze@{GetVectorsMaze}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{GetVectorsMaze()}{GetVectorsMaze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1_maze_sturcture}{maze\+\_\+t}} Parser\+::\+Get\+Vectors\+Maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Получение данных о спаршенном maze. 
+
+\begin{DoxyReturn}{Returns}
+maze\+\_\+t структура со всей информацией о cave 
+\end{DoxyReturn}
+\Hypertarget{classs21_1_1_parser_a91496d7add27dddb457e355537313294}\label{classs21_1_1_parser_a91496d7add27dddb457e355537313294} 
+\index{s21::Parser@{s21::Parser}!SetFilepathCave@{SetFilepathCave}}
+\index{SetFilepathCave@{SetFilepathCave}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{SetFilepathCave()}{SetFilepathCave()}}
+{\footnotesize\ttfamily void Parser\+::\+Set\+Filepath\+Cave (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Функция для установки пути к файлу с cave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & путь к файлу с cave \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classs21_1_1_parser_a456ad01ab37c7aedb59c6d14c87b1bc0}\label{classs21_1_1_parser_a456ad01ab37c7aedb59c6d14c87b1bc0} 
+\index{s21::Parser@{s21::Parser}!SetFilepathMaze@{SetFilepathMaze}}
+\index{SetFilepathMaze@{SetFilepathMaze}!s21::Parser@{s21::Parser}}
+\doxysubsubsection{\texorpdfstring{SetFilepathMaze()}{SetFilepathMaze()}}
+{\footnotesize\ttfamily void Parser\+::\+Set\+Filepath\+Maze (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Функция для установки пути к файлу с maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & пути к файлу с maze \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+back/parser.\+h\item 
+back/parser.\+cc\end{DoxyCompactItemize}

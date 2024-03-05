@@ -1,0 +1,89 @@
+\doxysection{Writer Class Reference}
+\hypertarget{class_writer}{}\label{class_writer}\index{Writer@{Writer}}
+
+
+Класс для записи maze и cave в файл  
+
+
+
+
+{\ttfamily \#include $<$writer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_writer_aedc04cd5fb7b4b99d3ad906fef2116ce}\label{class_writer_aedc04cd5fb7b4b99d3ad906fef2116ce} 
+{\bfseries Writer} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию для writer. \end{DoxyCompactList}\item 
+\Hypertarget{class_writer_a0efdf6c7ef995ba77fe624083dd602d0}\label{class_writer_a0efdf6c7ef995ba77fe624083dd602d0} 
+{\bfseries Writer} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Конструктор для writer с путём к файлу для записи матриц \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_writer_a204fe11c8b460dce563509e0beb9ea92}{Set\+Filepath}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Функция установки пути к файлу \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_writer_a0a7847d900de9f7eb3570f5d4ecc38bd}{Write\+Maze\+To\+File}} (\mbox{\hyperlink{structs21_1_1_maze_sturcture}{s21\+::maze\+\_\+t}} \&maze)
+\begin{DoxyCompactList}\small\item\em Функция для записи maze в файл \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_writer_a6c12b9f2d7e1540e67d9eac4561c677d}{Write\+Cave\+To\+File}} (\mbox{\hyperlink{structs21_1_1_cave_sturcture}{s21\+::cave\+\_\+t}} \&cave)
+\begin{DoxyCompactList}\small\item\em Функция для записи cave в файл \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_writer_af9acfcb1da4b1727b4b54d8a9f8df054}\label{class_writer_af9acfcb1da4b1727b4b54d8a9f8df054} 
+std\+::string {\bfseries file\+To\+Write\+In}
+\begin{DoxyCompactList}\small\item\em Путь к файлу \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для записи maze и cave в файл 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_writer_a204fe11c8b460dce563509e0beb9ea92}\label{class_writer_a204fe11c8b460dce563509e0beb9ea92} 
+\index{Writer@{Writer}!SetFilepath@{SetFilepath}}
+\index{SetFilepath@{SetFilepath}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{SetFilepath()}{SetFilepath()}}
+{\footnotesize\ttfamily void Writer\+::\+Set\+Filepath (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Функция установки пути к файлу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Путь \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_writer_a6c12b9f2d7e1540e67d9eac4561c677d}\label{class_writer_a6c12b9f2d7e1540e67d9eac4561c677d} 
+\index{Writer@{Writer}!WriteCaveToFile@{WriteCaveToFile}}
+\index{WriteCaveToFile@{WriteCaveToFile}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{WriteCaveToFile()}{WriteCaveToFile()}}
+{\footnotesize\ttfamily void Writer\+::\+Write\+Cave\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs21_1_1_cave_sturcture}{s21\+::cave\+\_\+t}} \&}]{cave }\end{DoxyParamCaption})}
+
+
+
+Функция для записи cave в файл 
+
+
+\begin{DoxyParams}{Parameters}
+{\em maze} & cave для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_writer_a0a7847d900de9f7eb3570f5d4ecc38bd}\label{class_writer_a0a7847d900de9f7eb3570f5d4ecc38bd} 
+\index{Writer@{Writer}!WriteMazeToFile@{WriteMazeToFile}}
+\index{WriteMazeToFile@{WriteMazeToFile}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{WriteMazeToFile()}{WriteMazeToFile()}}
+{\footnotesize\ttfamily void Writer\+::\+Write\+Maze\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs21_1_1_maze_sturcture}{s21\+::maze\+\_\+t}} \&}]{maze }\end{DoxyParamCaption})}
+
+
+
+Функция для записи maze в файл 
+
+
+\begin{DoxyParams}{Parameters}
+{\em maze} & maze для записи \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+back/writer.\+h\item 
+back/writer.\+cc\end{DoxyCompactItemize}
