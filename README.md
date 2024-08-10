@@ -2,20 +2,6 @@
 
 Implementation of the Maze project.
 
-The russian version of the task can be found in the repository.
-
-## Contents
-
-1. [Chapter I](#chapter-i) \
-   1.1. [Introduction](#introduction)
-2. [Chapter II](#chapter-ii) \
-   2.1. [Information](#information)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Part 1](#part-1-implementation-of-the-maze-project) \
-   3.2. [Part 2](#part-2-generation-of-a-perfect-maze) \
-   3.3. [Part 3](#part-3-solving-the-maze) \
-   3.4. [Part 4](#part-4-bonus-cave-generation)
-
 
 ## Chapter I
 
